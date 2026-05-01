@@ -1,24 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Yumyard.Cafe
+
+Yumyard.Cafe is a local cafe ordering app built with Next.js and Convex. Customers browse the menu and place cash-on-delivery orders, while kitchen and admin staff manage order flow through protected local dashboards.
+
+## App Areas
+
+- Customer menu: `/`
+- Kitchen login: `/kitchen/login`
+- Kitchen pages: `/kitchen/order`, `/kitchen/delivery`, `/kitchen/orderdetails`, `/kitchen/deliverydetails`
+- Admin login: `/admin/login`
+- Admin pages: `/admin/order`, `/admin/menu`, `/admin/editmenu`, `/admin/editorders`
+
+Kitchen and admin routes are protected by `proxy.ts`. Login credentials are read from `.env.local`, and sessions are stored in HTTP-only cookies.
+
+## Env Setup
+
+- Kitchen env details: [`markdown/kitchen-env-setup.md`](markdown/kitchen-env-setup.md)
+- Admin env details: [`markdown/admin-env-setup.md`](markdown/admin-env-setup.md)
+
+Do not commit real `.env.local` values. The repo ignores `.env*` files by default.
+
+## Design References
+
+Figma exports are stored in `public/figma/`.
+
+![Yumyard home screen](public/figma/home.jpg)
+![Yumyard explore screen](public/figma/explore.png)
+![Yumyard detail screen](public/figma/detail.png)
+![Yumyard search screen](public/figma/search.png)
+![Yumyard cart screen](public/figma/Cart.png)
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the app by modifying files under `app/`. The page auto-updates as you edit files.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Scripts
+
+```bash
+pnpm dev
+pnpm build
+pnpm lint
+```
 
 ## Learn More
 
@@ -28,9 +57,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
