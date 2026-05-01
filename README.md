@@ -23,11 +23,13 @@ Do not commit real `.env.local` values. The repo ignores `.env*` files by defaul
 
 Figma exports are stored in `public/figma/`.
 
-![Yumyard home screen](public/figma/home.jpg)
-![Yumyard explore screen](public/figma/explore.png)
-![Yumyard detail screen](public/figma/detail.png)
-![Yumyard search screen](public/figma/search.png)
-![Yumyard cart screen](public/figma/Cart.png)
+| Home | Explore | Detail |
+| --- | --- | --- |
+| <img src="public/figma/home.jpg" alt="Yumyard home screen" width="220" /> | <img src="public/figma/explore.png" alt="Yumyard explore screen" width="220" /> | <img src="public/figma/detail.png" alt="Yumyard detail screen" width="220" /> |
+
+| Search | Cart |
+| --- | --- |
+| <img src="public/figma/search.png" alt="Yumyard search screen" width="220" /> | <img src="public/figma/Cart.png" alt="Yumyard cart screen" width="220" /> |
 
 ## Getting Started
 

@@ -21,10 +21,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} h-full antialiased`}
+      className={`${poppins.variable} h-full bg-white antialiased`}
     >
-      <body className="min-h-full flex justify-center bg-white">
-        <div className="mx-auto flex min-h-screen w-full max-w-[430px] flex-col bg-white">
+      <body className="min-h-full overflow-x-hidden bg-white text-neutral-950">
+        <div className="mx-auto flex min-h-dvh w-full max-w-mobile flex-col overflow-x-hidden bg-white">
           {children}
         </div>
       </body>
