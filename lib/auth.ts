@@ -15,7 +15,7 @@ export const authConfig = {
     cookieName: "yumyard_admin_session",
     ttlMs: 30 * dayMs,
     loginPath: "/admin/login",
-    homePath: "/admin/order",
+    homePath: "/admin/menu",
   },
 } as const;
 
