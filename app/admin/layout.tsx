@@ -8,7 +8,7 @@ export default function AdminLayout({
   return (
     <div className="flex min-h-dvh flex-col bg-white">
       <AdminNavHeader />
-      <div className="flex-1">{children}</div>
+      <div className="flex min-h-0 flex-1 flex-col">{children}</div>
     </div>
   );
 }

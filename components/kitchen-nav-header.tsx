@@ -19,10 +19,10 @@ export function KitchenNavHeader() {
           type="button"
           onClick={() => router.back()}
         >
-          <Icon aria-hidden icon={chevronLeft} className="size-8" />
+          <Icon aria-hidden icon={chevronLeft} className="size-8 text-[#363A33]" />
           <span className="text-base font-semibold leading-none">Back</span>
         </button>
-        <span className="text-lg font-semibold leading-none text-neutral-900">
+        <span className="text-lg font-semibold leading-none text-[#363A33]">
           Kitchen
         </span>
       </nav>

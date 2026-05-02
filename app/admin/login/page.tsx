@@ -16,7 +16,7 @@ export default async function AdminLoginPage({
   const errorMessage = error ? errorMessages[error] : null;
 
   return (
-    <main className="flex min-h-screen items-center justify-center px-6 py-10 text-neutral-950">
+    <main className="flex flex-1 items-center justify-center px-6 py-10 text-neutral-950">
       <form
         action="/api/auth/admin/login"
         method="post"
