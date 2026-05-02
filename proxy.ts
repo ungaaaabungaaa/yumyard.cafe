@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { authConfig, isSessionValid, type AuthRole } from "@/lib/auth";
+import { isStoreOpen } from "@/lib/store-hours";
 
 function getRole(pathname: string): AuthRole | null {
   if (pathname.startsWith("/kitchen")) {
@@ -16,6 +17,10 @@ function getRole(pathname: string): AuthRole | null {
 export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
   const role = getRole(pathname);
+
+  if (!role && !isStoreOpen() && pathname !== "/") {
+    return NextResponse.rewrite(new URL("/", request.url));
+  }
 
   if (!role) {
     return NextResponse.next();
@@ -44,5 +49,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/kitchen/:path*", "/admin/:path*"],
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico|site.webmanifest|.*\\..*).*)"],
 };

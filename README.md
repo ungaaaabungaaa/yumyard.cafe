@@ -12,6 +12,20 @@ Yumyard.Cafe is a local cafe ordering app built with Next.js and Convex. Custome
 
 Kitchen and admin routes are protected by `proxy.ts`. Login credentials are read from `.env.local`, and sessions are stored in HTTP-only cookies.
 
+## Store Hours
+
+Customer-facing routes use hardcoded store hours from `lib/store-hours.ts`. Admin and kitchen routes are excluded, so staff can still log in and work while the customer side is closed.
+
+Edit these values in `lib/store-hours.ts`:
+
+```ts
+export const STORE_TIME_ZONE = "Asia/Kolkata";
+export const STORE_OPEN_TIME = { hour: 11, minute: 0 };
+export const STORE_CLOSE_TIME = { hour: 2, minute: 0 };
+```
+
+The current setup means the store is open from 11:00 AM to 2:00 AM in `Asia/Kolkata`. Because the close time is earlier than the open time, the helper treats it as an overnight schedule.
+
 ## Env Setup
 
 - Kitchen env details: [`markdown/kitchen-env-setup.md`](markdown/kitchen-env-setup.md)
