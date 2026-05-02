@@ -6,11 +6,11 @@ export type StoreClockTime = {
 export const STORE_TIME_ZONE = "Asia/Kolkata";
 export const STORE_OPEN_TIME = {
   hour: 11,
-  minute: 0,
+  minute: 30,
 } satisfies StoreClockTime;
 export const STORE_CLOSE_TIME = {
-  hour: 2,
-  minute: 0,
+  hour: 23,
+  minute: 30,
 } satisfies StoreClockTime;
 
 function toMinutes(time: StoreClockTime) {

@@ -20,11 +20,11 @@ Edit these values in `lib/store-hours.ts`:
 
 ```ts
 export const STORE_TIME_ZONE = "Asia/Kolkata";
-export const STORE_OPEN_TIME = { hour: 11, minute: 0 };
-export const STORE_CLOSE_TIME = { hour: 2, minute: 0 };
+export const STORE_OPEN_TIME = { hour: 11, minute: 30 };
+export const STORE_CLOSE_TIME = { hour: 23, minute: 30 };
 ```
 
-The current setup means the store is open from 11:00 AM to 2:00 AM in `Asia/Kolkata`. Because the close time is earlier than the open time, the helper treats it as an overnight schedule.
+The current setup means the store is open from 11:30 AM to 11:30 PM in `Asia/Kolkata`.
 
 ## Env Setup
 
